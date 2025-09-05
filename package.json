@@ -1,0 +1,17 @@
+{
+  "name": "angelos-dashboard",
+  "version": "0.2.0",
+  "private": true,
+  "main": "electron/main.ts",
+  "build": {
+    "extends": null,
+    "files": ["dist/**/*", "electron/**/*"],
+    "win": { "target": ["msi"], "artifactName": "CodeYoda-${version}-Setup.${ext}" }
+  },
+  "scripts": {
+    "dev": "concurrently -k \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "build": "vite build",
+    "pack": "electron-builder --win msi",
+    "release": "electron-builder --publish always"
+  }
+}

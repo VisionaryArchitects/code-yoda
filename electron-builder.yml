@@ -1,0 +1,13 @@
+appId: com.angelos.codeyoda
+productName: AngelOS Code Yoda
+files:
+  - from: Dashboard/dist
+    to: .
+win:
+  target:
+    - msi
+  artifactName: "CodeYoda-${version}-Setup.${ext}"
+  publisherName: ["Your Company"]
+  signAndEditExecutable: false
+directories:
+  output: release

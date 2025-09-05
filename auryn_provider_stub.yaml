@@ -1,0 +1,5 @@
+llm:
+  provider: auryn
+  model: auryn-default
+  api_base: http://127.0.0.1:9090/v1
+  api_key_env: AURYN_API_KEY
